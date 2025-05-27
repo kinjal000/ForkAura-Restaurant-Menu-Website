@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Menu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+    font-family: 'Poppins', sans-serif;
+    background: #fbfcfa;
+    color: #6d824a;
+    line-height: 1.6;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+    h1 {
+      text-align: center;
+      color: #947a30;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-top: 60px;
+      margin-bottom: 20px;
+      color: #6d824a;
+      text-align: left;
+      border-left: 6px solid #fede17;
+      padding-left: 15px;
+      font-size: 1.8rem;
+    }
+
+    header {
+    background-color: #f5f7ec;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #947a30;
+    text-shadow: 1px 1px 0 #f5f7ec;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px #d8af3b;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu li a {
+    color: #6d824a;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    background: #6d824a;
+    color: #fff4bc;
+}
+
+    .menu-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .menu-card {
+      background: linear-gradient(145deg, #fff4bc, #f8eeec);
+      border: 1px solid #f4e98c;
+      border-radius: 15px;
+      width: 300px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-content {
+      padding: 15px;
+    }
+
+    .menu-content h3 {
+      font-size: 1.2rem;
+      color: #947a30;
+      margin-bottom: 10px;
+    }
+
+    .menu-content p {
+      font-size: 0.95rem;
+      color: #898a8e;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #d8af3b;
+      font-size: 1.1rem;
+    }
+
+    footer {
+    background: linear-gradient(90deg, #947a30, #6d824a);
+    color: #fbfcfa;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 900px) {
+    .menu-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    .nav-menu {
+        gap: 20px;
+        margin-top: 10px;
+    }
+    .hero-overlay h1 {
+        font-size: 2.5rem;
+    }
+    .hero-overlay p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="/Users/kinjalgawali/Desktop/Screenshot 2025-05-27 at 1.07.06 PM.png" alt="ForkAura Logo" />
+                <span>ForkAura</span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="restaurantmenu.html">Menu</a></li>
+                    <li><a href="restaurantabout.html">About</a></li>
+                    <li><a href="restaurantcontact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  <h1>Our Menu</h1>
+
+  <!-- Starters -->
+  <h2>Starters</h2>
+  <div class="menu-section">
+    <div class="menu-card">
+      <img src="VegSpringRolls.png" alt="Spring Rolls">
+      <div class="menu-content">
+        <h3>Veg Spring Rolls</h3>
+        <p>Crispy rolls stuffed with mixed veggies served with chili sauce.</p>
+        <div class="price">₹120</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="TomatoSoup.png" alt="Tomato Soup">
+      <div class="menu-content">
+        <h3>Tomato Soup</h3>
+        <p>Fresh creamy tomato soup garnished with herbs and croutons.</p>
+        <div class="price">₹99</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="GobiManchurian.png" alt="Gobi Manchurian">
+      <div class="menu-content">
+        <h3>Gobi Manchurian</h3>
+        <p>Crispy cauliflower florets tossed in spicy Indo-Chinese sauce.</p>
+        <div class="price">₹150</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="PaneerPakora.png" alt="Paneer Pakora">
+      <div class="menu-content">
+        <h3>Paneer Pakora</h3>
+        <p>Chunks of paneer dipped in spiced batter and deep fried.</p>
+        <div class="price">₹130</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="Corn&VeggieSalad.png" alt="Corn Salad">
+      <div class="menu-content">
+        <h3>Corn & Veggie Salad</h3>
+        <p>Sweet corn and veggies tossed in light lemon dressing.</p>
+        <div class="price">₹110</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="CheesyNachos.png" alt="Cheesy Nachos">
+      <div class="menu-content">
+        <h3>Cheesy Nachos</h3>
+        <p>Nacho chips layered with melted cheese, beans, and salsa.</p>
+        <div class="price">₹145</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Course -->
+  <h2>Main Course</h2>
+  <div class="menu-section">
+    <div class="menu-card">
+      <img src="PaneerButterMasala.png" alt="Paneer Butter Masala">
+      <div class="menu-content">
+        <h3>Paneer Butter Masala</h3>
+        <p>Rich creamy tomato-based curry with soft paneer cubes.</p>
+        <div class="price">₹220</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="VegBiryani.png" alt="Veg Biryani">
+      <div class="menu-content">
+        <h3>Veg Biryani</h3>
+        <p>Fragrant rice cooked with mixed veggies and spices.</p>
+        <div class="price">₹180</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="NorthIndianThali.png" alt="North Indian Thali">
+      <div class="menu-content">
+        <h3>North Indian Thali</h3>
+        <p>Combination of curries, bread, rice, sweet and salad.</p>
+        <div class="price">₹250</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="VegHakkaNoodles.png" alt="Veg Hakka Noodles">
+      <div class="menu-content">
+        <h3>Veg Hakka Noodles</h3>
+        <p>Wok-tossed noodles with vegetables and soy seasoning.</p>
+        <div class="price">₹160</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="DalTadka.png" alt="Dal Tadka">
+      <div class="menu-content">
+        <h3>Dal Tadka</h3>
+        <p>Yellow lentils tempered with ghee and Indian spices.</p>
+        <div class="price">₹140</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="CholeBhature.png" alt="Chole Bhature">
+      <div class="menu-content">
+        <h3>Chole Bhature</h3>
+        <p>Spicy chickpea curry served with deep-fried fluffy bread.</p>
+        <div class="price">₹170</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Desserts -->
+  <h2>Desserts</h2>
+  <div class="menu-section">
+    <div class="menu-card">
+      <img src="GulabJamun.png" alt="Gulab Jamun">
+      <div class="menu-content">
+        <h3>Gulab Jamun</h3>
+        <p>Soft milk-based balls soaked in cardamom sugar syrup.</p>
+        <div class="price">₹90</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="VanillaIceCream.png" alt="Ice Cream">
+      <div class="menu-content">
+        <h3>Vanilla Ice Cream</h3>
+        <p>Classic creamy vanilla ice cream made from fresh milk.</p>
+        <div class="price">₹80</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="RiceKheer.png" alt="Rice Kheer">
+      <div class="menu-content">
+        <h3>Rice Kheer</h3>
+        <p>Slow-cooked rice pudding with cardamom and dry fruits.</p>
+        <div class="price">₹100</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="ChocolateCake.png" alt="Chocolate Cake">
+      <div class="menu-content">
+        <h3>Chocolate Cake</h3>
+        <p>Rich and moist chocolate sponge with ganache topping.</p>
+        <div class="price">₹150</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="Rasmalai.png" alt="Rasmalai">
+      <div class="menu-content">
+        <h3>Rasmalai</h3>
+        <p>Soft cheese balls in flavored milk, garnished with nuts.</p>
+        <div class="price">₹110</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="WalnutBrownie.png" alt="Walnut Brownie">
+      <div class="menu-content">
+        <h3>Walnut Brownie</h3>
+        <p>Fudgy brownie loaded with walnuts, served warm.</p>
+        <div class="price">₹120</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 ForkAura. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
